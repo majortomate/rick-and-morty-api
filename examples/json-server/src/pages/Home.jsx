@@ -1,8 +1,9 @@
 import React from 'react'
-
 import CharacterCard from '../components/CharacterCard'
 
-const HomePage = () => {
+const HomePage = (props) => {
+
+  const {getCharacters} = props
   return(
     <div>
       <section className="hero__Wrapper">
@@ -13,7 +14,7 @@ const HomePage = () => {
       </section>
       <section className="showcase__Wrapper">
         <section className="showcase__Inner">
-          <CharacterCard />
+          <CharacterCard getCharacters={getCharacters}/>
         </section>
       </section>
     </div>

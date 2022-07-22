@@ -135,6 +135,13 @@ svg:not(:root) {
   background: rgb(214, 61, 46);
   border-radius: 50%;
 }
+.characterCard__ContentWrapper .status__icon--alive{
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.375rem;
+  background: green;
+  border-radius: 50%;
+}
 
 .text-gray {
   color: rgb(158, 158, 158);

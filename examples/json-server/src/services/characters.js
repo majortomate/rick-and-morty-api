@@ -5,8 +5,10 @@ export async function getCharacters() {
   return await response.json();
 }
 
-export async function getCharacter(id) {
 
+export async function getCharacter(id) {
+  const response = await fetch(`${BASE_URL}/characters/${id}`);
+  return await response.json();
 }
 
 export async function createCharacter(character) {

@@ -6,6 +6,7 @@ import EpisodeDetailPage from './pages/EpisodeDetail';
 import CharactersPage from './pages/Characters';
 import CharacterDetailPage from './pages/CharacterDetail';
 import RegisterPage from './pages/RegisterCharacter';
+import { getCharacters } from './services/characters'
 
 import './App.css';
 
@@ -13,8 +14,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/characters" element={<CharactersPage />} />
+        <Route path="/" element={<HomePage getCharacters={getCharacters}/>} />
+        <Route path="/characters" element={<CharactersPage getCharacters={getCharacters}/>} />
         <Route path="/characters/:id" element={<CharacterDetailPage />} />
         <Route path="/episodes" element={<EpisodesPage />} />
         <Route path="/episodes/:id" element={<EpisodeDetailPage />} />
